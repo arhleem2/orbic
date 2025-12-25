@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Orbit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="js/backend.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar (Reused) -->
+        <nav class="sidebar">
+            <div class="brand">Orbit</div>
+
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span>Home</span>
+                </a>
+                <a href="explore.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                    <span>Explore</span>
+                </a>
+                <a href="market.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z">
+                        </path>
+                    </svg>
+                    <span>Market</span>
+                </a>
+                <a href="notifications.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    <span>Notifications</span>
+                </a>
+
+                <a href="messages.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>Messages</span>
+                </a>
+                <a href="profile.html" class="nav-item active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span>Profile</span>
+                </a>
+                <a href="settings.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
+                    </svg>
+                    <span>Settings</span>
+                </a>
+            </div>
+
+            <button class="btn-post">
+                <svg class="hidden-desktop" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M12 5v14M5 12h14" />
+                </svg>
+                <span>Post</span>
+            </button>
+        </nav>
+
+        <!-- Main Feed (Profile View) -->
+        <main class="main-feed">
+            <header class="feed-header">
+                <div style="display:flex; align-items:center; gap:12px;">
+                    <a href="index.html" style="display:flex; align-items:center;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                    </a>
+                    <div>
+                        <h2 style="font-size:18px; line-height:1.2;">Felix Admin</h2>
+                        <span style="font-size:13px; color:var(--text-muted); font-weight:400;">34 Posts</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="profile-header">
+                <div class="profile-cover" style="position:relative; overflow:hidden;">
+                    <!-- Banner Upload -->
+                    <input type="file" id="banner-upload" accept="image/*" style="display:none;">
+                    <button id="btn-edit-banner"
+                        style="position:absolute; top:10px; right:10px; background:rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.2); color:white; border-radius:50%; width:32px; height:32px; cursor:pointer; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity 0.2s;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                            </path>
+                            <circle cx="12" cy="13" r="4"></circle>
+                        </svg>
+                    </button>
+                    <!-- Edit Profile Button positioned relative to cover but outside logic -->
+                    <button class="edit-profile-btn">Edit Profile</button>
+                    <!-- Block Button (Simulated for other users) -->
+                    <button id="btn-block-user"
+                        style="position:absolute; bottom:10px; right:10px; background:var(--bg-card); color:#ef4444; border:1px solid #ef4444; padding:6px 12px; border-radius:20px; font-size:12px; cursor:pointer; font-weight:600; display:none;">Block
+                        User</button>
+
+                    <div class="profile-avatar-large"></div>
+                </div>
+
+                <div class="profile-details">
+                    <div class="profile-name" id="profile-name">
+                        Felix Admin
+                        <span class="badge" title="Verified" style="color:#3b82f6;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                            </svg>
+                        </span>
+                        <span class="badge" title="Top Fan" style="color:#f59e0b;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                </path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="profile-handle" id="profile-handle">@felix_admin</div>
+                    <div class="profile-bio" id="profile-bio">
+                        Building the future of social media. 🚀
+                        Lover of sleek UI and fast code.
+                    </div>
+
+                    <!-- LINK TREE -->
+                    <div class="profile-links-section" style="margin-top:12px;">
+                        <div class="profile-link"
+                            style="font-size:13px; color:var(--primary); margin-top:8px; display:flex; align-items:center; gap:8px;">
+                            <a href="#" style="color:inherit; text-decoration:none;"
+                                id="profile-website">orbit.social</a>
+                            <button id="btn-qr-code"
+                                style="background:none; border:none; color:var(--text-muted); cursor:pointer;"
+                                title="Show QR Code">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7"></rect>
+                                    <rect x="14" y="3" width="7" height="7"></rect>
+                                    <rect x="14" y="14" width="7" height="7"></rect>
+                                    <rect x="3" y="14" width="7" height="7"></rect>
+                                </svg>
+                            </button>
+                        </div>
+                        <button id="toggle-link-tree"
+                            style="background:none; border:none; color:var(--text-muted); font-size:12px; cursor:pointer; display:flex; align-items:center; gap:4px; margin-top:4px;">
+                            <span>+ 2 more links</span>
+                        </button>
+                        <div id="link-tree-list"
+                            style="display:none; flex-direction:column; gap:4px; margin-top:8px; padding-left:12px; border-left:2px solid var(--border-subtle);">
+                            <a href="#"
+                                style="font-size:13px; color:var(--text-main); text-decoration:none; display:flex; align-items:center; gap:6px;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                    </path>
+                                </svg>
+                                Twitter
+                            </a>
+                            <a href="#"
+                                style="font-size:13px; color:var(--text-main); text-decoration:none; display:flex; align-items:center; gap:6px;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                                Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- STORY HIGHLIGHTS -->
+                    <div class="profile-highlights"
+                        style="display:flex; gap:16px; margin-top:20px; overflow-x:auto; padding-bottom:10px;">
+                        <div class="highlight-item"
+                            style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+                            <div
+                                style="width:60px; height:60px; border-radius:50%; background:#27272a; border:2px solid var(--border-subtle); display:flex; align-items:center; justify-content:center;">
+                                <span style="font-size:20px;">✈️</span>
+                            </div>
+                            <span style="font-size:12px;">Travel</span>
+                        </div>
+                        <div class="highlight-item"
+                            style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+                            <div
+                                style="width:60px; height:60px; border-radius:50%; background:#27272a; border:2px solid var(--border-subtle); display:flex; align-items:center; justify-content:center;">
+                                <span style="font-size:20px;">💻</span>
+                            </div>
+                            <span style="font-size:12px;">Coding</span>
+                        </div>
+                        <div class="highlight-item"
+                            style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+                            <div
+                                style="width:60px; height:60px; border-radius:50%; background:#27272a; border:2px solid var(--border-subtle); display:flex; align-items:center; justify-content:center;">
+                                <span style="font-size:20px;">🎨</span>
+                            </div>
+                            <span style="font-size:12px;">Art</span>
+                        </div>
+                        <div class="highlight-item"
+                            style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+                            <div
+                                style="width:60px; height:60px; border-radius:50%; background:#27272a; border:2px solid var(--border-subtle); display:flex; align-items:center; justify-content:center;">
+                                <span style="font-size:20px;">➕</span>
+                            </div>
+                            <span style="font-size:12px;">New</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-stats">
+                        <span class="stat-item"><b>142</b> Following</span>
+                        <span class="stat-item"><b>8.5K</b> Followers</span>
+                    </div>
+                </div>
+
+                <div class="profile-tabs">
+                    <div class="tab-item active" data-tab="posts">Posts</div>
+                    <div class="tab-item" data-tab="replies">Replies</div>
+                    <div class="tab-item" data-tab="media">Media</div>
+                    <div class="tab-item" data-tab="likes">Likes</div>
+                </div>
+            </div>
+
+            <!-- Posts Stream -->
+            <div id="feed-stream" class="tab-content active" data-content="posts">
+                <!-- Post 1 (Pinned) -->
+                <article class="post-card">
+                    <div
+                        style="color:var(--text-muted); font-size:12px; margin-bottom:8px; display:flex; gap:6px; align-items:center;">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="8.5" cy="7" r="4"></circle>
+                            <polyline points="17 11 19 13 23 9"></polyline>
+                        </svg>
+                        Pinned Tweet
+                    </div>
+                    <div class="post-header">
+                        <div class="user-info">
+                            <div class="avatar"
+                                style="background-image: url('https://api.dicebear.com/7.x/avataaars/svg?seed=Felix');">
+                            </div>
+                            <div class="user-meta">
+                                <span class="name">Felix Admin</span>
+                                <span class="username">@felix_admin</span>
+                            </div>
+                        </div>
+                        <div class="more-options">...</div>
+                    </div>
+                    <div class="post-content">
+                        Welcome to Orbit! 🪐 We are live. navigate around and let me know what you think of the new
+                        glassmorphism design system.
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn comment">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                </path>
+                            </svg>
+                            158
+                        </button>
+                        <button class="action-btn retweet">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="17 1 21 5 17 9"></polyline>
+                                <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                                <polyline points="7 23 3 19 7 15"></polyline>
+                                <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                            </svg>
+                            45
+                        </button>
+                        <button class="action-btn like">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                            850
+                        </button>
+                        <button class="action-btn share">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Replies Tab Content -->
+            <div id="replies-stream" class="tab-content" data-content="replies" style="display:none;">
+                <article class="post-card">
+                    <div style="color:var(--text-muted); font-size:13px; margin-bottom:8px;">Replying to @sarah_dev
+                    </div>
+                    <div class="post-header">
+                        <div class="user-info">
+                            <div class="avatar"
+                                style="background-image: url('https://api.dicebear.com/7.x/avataaars/svg?seed=Felix'); width:32px; height:32px;">
+                            </div>
+                            <div class="user-meta">
+                                <span class="name">Felix Admin</span>
+                                <span class="username">@felix_admin</span>
+                                <span style="color:var(--text-muted); font-size:12px;">• 2h</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-content" style="font-size:14px; margin-left:42px;">
+                        Absolutely! That framework is a game changer for component reuse. 🔥
+                    </div>
+                </article>
+            </div>
+
+            <!-- Media Tab Content -->
+            <div id="media-stream" class="tab-content" data-content="media" style="display:none;">
+                <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:4px;">
+                    <div
+                        style="aspect-ratio:1; background-image:url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400'); background-size:cover;">
+                    </div>
+                    <div
+                        style="aspect-ratio:1; background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400'); background-size:cover;">
+                    </div>
+                    <div
+                        style="aspect-ratio:1; background-image:url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400'); background-size:cover;">
+                    </div>
+                    <div
+                        style="aspect-ratio:1; background-image:url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400'); background-size:cover;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Likes Tab Content -->
+            <div id="likes-stream" class="tab-content" data-content="likes" style="display:none;">
+                <article class="post-card">
+                    <div
+                        style="color:var(--text-muted); font-size:12px; margin-bottom:8px; display:flex; gap:6px; align-items:center;">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="#f43f5e" stroke="none">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            </path>
+                        </svg>
+                        Liked by Felix Admin
+                    </div>
+                    <div class="post-header">
+                        <div class="user-info">
+                            <div class="avatar"
+                                style="background-image: url('https://api.dicebear.com/7.x/avataaars/svg?seed=Jessica');">
+                            </div>
+                            <div class="user-meta">
+                                <span class="name">Jessica UI</span>
+                                <span class="username">@jessica_ui</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        Just deployed the new landing page! Check it out. 🚀
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Right Widgets (Reused) -->
+        <aside class="widgets">
+            <div class="widget-card">
+                <h3 class="widget-title">You might like</h3>
+                <div style="display:flex; gap:10px; margin-bottom:12px; align-items:center;">
+                    <div class="avatar"
+                        style="width:36px; height:36px; background-image: url('https://api.dicebear.com/7.x/avataaars/svg?seed=Sam');">
+                    </div>
+                    <div>
+                        <div style="font-weight:600; font-size:14px;">Sam Smith</div>
+                        <div style="font-size:12px; color:var(--text-muted)">@sam_dev</div>
+                    </div>
+                    <button
+                        style="margin-left:auto; background:white; color:black; border:none; padding:6px 14px; border-radius:20px; font-weight:600; cursor:pointer;">Follow</button>
+                </div>
+            </div>
+
+            <div class="widget-card">
+                <h3 class="widget-title">Trending</h3>
+                <!-- ... reused content ... -->
+                <div class="trending-item">
+                    <div class="trending-category">Technology · Trending</div>
+                    <div class="trending-topic">#OrbitLaunch</div>
+                    <div class="trending-category">2.1K posts</div>
+                </div>
+            </div>
+        </aside>
+        <!-- EDIT PROFILE MODAL -->
+        <div id="edit-profile-modal" class="edit-profile-modal" style="display:none; opacity:0; pointer-events:none;">
+            <div class="edit-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                    <h3 style="margin:0;">Edit Profile</h3>
+                    <button id="close-edit-profile"
+                        style="background:none; border:none; color:var(--text-muted); font-size:24px; cursor:pointer;">&times;</button>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:16px;">
+                    <div>
+                        <label style="display:block; margin-bottom:6px; font-weight:600; font-size:14px;">Name</label>
+                        <input type="text" id="edit-name" class="form-input" value="Felix Admin">
+                    </div>
+                    <div>
+                        <label style="display:block; margin-bottom:6px; font-weight:600; font-size:14px;">Bio</label>
+                        <textarea id="edit-bio" class="form-input" rows="3"
+                            style="resize:none;">Building the future of social media. 🚀</textarea>
+                    </div>
+                    <div>
+                        <label
+                            style="display:block; margin-bottom:6px; font-weight:600; font-size:14px;">Website</label>
+                        <input type="text" id="edit-website" class="form-input" value="orbit.social">
+                    </div>
+                    <button id="save-profile"
+                        style="width:100%; padding:12px; background:var(--primary); color:white; border:none; border-radius:12px; font-weight:600; cursor:pointer; margin-top:10px;">Save
+                        Changes</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- QR CODE MODAL -->
+        <div id="qr-modal" class="modal-overlay"
+            style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:2000; align-items:center; justify-content:center;">
+            <div class="modal-card"
+                style="background:white; padding:30px; border-radius:20px; text-align:center; max-width:300px;">
+                <div style="margin-bottom:20px;">
+                    <h3 style="color:black; margin:0;">@felix_admin</h3>
+                    <p style="color:#666; font-size:14px; margin-top:4px;">Scan to follow me on Orbit</p>
+                </div>
+                <!-- Mock QR Code -->
+                <div
+                    style="width:200px; height:200px; background:black; margin:0 auto; display:flex; align-items:center; justify-content:center; position:relative;">
+                    <div style="width:180px; height:180px; background:white;"></div>
+                    <div style="width:140px; height:140px; background:black; position:absolute;"></div>
+                    <div
+                        style="width:120px; height:120px; background:white; position:absolute; display:flex; align-items:center; justify-content:center;">
+                        <div
+                            style="width:40px; height:40px; background:black; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-weight:800;">
+                            O</div>
+                    </div>
+                </div>
+                <button id="close-qr"
+                    style="margin-top:20px; background:#eee; border:none; padding:10px 24px; border-radius:20px; cursor:pointer; font-weight:600;">Close</button>
+            </div>
+        </div>
+
+        <!-- SHARE MODAL (Reused) -->
+        <div class="share-modal">
+            <div class="share-card">
+                <div class="share-header">
+                    <div class="share-title">Share Profile</div>
+                    <div class="share-close">&times;</div>
+                </div>
+                <div class="share-grid">
+                    <!-- Content injected by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- DISPLAY SETTINGS MODAL -->
+        <div id="display-modal" class="modal-overlay"
+            style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:1000; align-items:center; justify-content:center;">
+            <div class="modal-card"
+                style="background:var(--bg-card); padding:24px; border-radius:16px; width:90%; max-width:400px; border:1px solid var(--border-subtle); backdrop-filter:blur(10px);">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                    <h3 style="margin:0;">Display Settings</h3>
+                    <button id="close-display"
+                        style="background:none; border:none; color:var(--text-muted); font-size:24px; cursor:pointer;">&times;</button>
+                </div>
+
+                <!-- Color Palette -->
+                <div style="margin-bottom:24px;">
+                    <label style="display:block; margin-bottom:10px; font-weight:600; font-size:14px;">Accent
+                        Color</label>
+                    <div style="display:flex; gap:12px;">
+                        <div class="color-swatch" data-color="#6366f1"
+                            style="width:32px; height:32px; border-radius:50%; background:#6366f1; cursor:pointer; border:2px solid white;">
+                        </div>
+                        <div class="color-swatch" data-color="#ec4899"
+                            style="width:32px; height:32px; border-radius:50%; background:#ec4899; cursor:pointer; border:2px solid transparent;">
+                        </div>
+                        <div class="color-swatch" data-color="#10b981"
+                            style="width:32px; height:32px; border-radius:50%; background:#10b981; cursor:pointer; border:2px solid transparent;">
+                        </div>
+                        <div class="color-swatch" data-color="#f59e0b"
+                            style="width:32px; height:32px; border-radius:50%; background:#f59e0b; cursor:pointer; border:2px solid transparent;">
+                        </div>
+                        <div class="color-swatch" data-color="#3b82f6"
+                            style="width:32px; height:32px; border-radius:50%; background:#3b82f6; cursor:pointer; border:2px solid transparent;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Theme Toggle -->
+                <div style="margin-bottom:24px;">
+                    <label style="display:block; margin-bottom:10px; font-weight:600; font-size:14px;">Background
+                        Theme</label>
+                    <div
+                        style="display:flex; gap:10px; background:rgba(255,255,255,0.05); padding:4px; border-radius:12px;">
+                        <button class="theme-btn active" data-theme="dark"
+                            style="flex:1; padding:8px; border:none; border-radius:8px; background:var(--bg-card); color:white; cursor:pointer;">Dark</button>
+                        <button class="theme-btn" data-theme="light"
+                            style="flex:1; padding:8px; border:none; border-radius:8px; background:transparent; color:var(--text-muted); cursor:pointer;">Light</button>
+                        <button class="theme-btn" data-theme="dim"
+                            style="flex:1; padding:8px; border:none; border-radius:8px; background:transparent; color:var(--text-muted); cursor:pointer;">Dim</button>
+                    </div>
+                </div>
+
+                <!-- Font Size -->
+                <div style="margin-bottom:24px;">
+                    <label style="display:block; margin-bottom:10px; font-weight:600; font-size:14px;">Font Size</label>
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <span style="font-size:12px;">Aa</span>
+                        <input type="range" min="14" max="20" value="16" id="font-range"
+                            style="flex:1; cursor:pointer;">
+                        <span style="font-size:18px;">Aa</span>
+                    </div>
+                </div>
+
+                <button id="save-display"
+                    style="width:100%; padding:12px; background:var(--primary); color:white; border:none; border-radius:12px; font-weight:600; cursor:pointer;">Done</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

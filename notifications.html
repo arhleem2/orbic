@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications | Orbit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="js/backend.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="brand">Orbit</div>
+
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span>Home</span>
+                </a>
+                <a href="explore.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                    <span>Explore</span>
+                </a>
+                <a href="market.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z">
+                        </path>
+                    </svg>
+                    <span>Market</span>
+                </a>
+                <a href="notifications.html" class="nav-item active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    <span>Notifications</span>
+                </a>
+
+                <a href="messages.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>Messages</span>
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span>Profile</span>
+                </a>
+                <a href="settings.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
+                    </svg>
+                    <span>Settings</span>
+                </a>
+            </div>
+
+            <button class="btn-post">
+                <svg class="hidden-desktop" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M12 5v14M5 12h14" />
+                </svg>
+                <span>Post</span>
+            </button>
+        </nav>
+
+        <!-- Main Feed -->
+        <main class="main-feed">
+            <header class="feed-header">
+                <h2>Notifications</h2>
+            </header>
+
+            <div class="notifications-list">
+                <div class="notification-item">
+                    <div class="notif-icon like">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="notif-content">
+                        <div class="notif-text"><b>Sarah Jenkins</b> liked your post.</div>
+                        <div class="notif-time">2 minutes ago</div>
+                    </div>
+                    <!-- Optional: Image snippet of what was liked -->
+                    <img src="https://picsum.photos/seed/12/40/40"
+                        style="width: 40px; height: 40px; border-radius: 8px; object-fit: cover;" alt="">
+                </div>
+
+                <div class="notification-item">
+                    <div class="notif-icon follow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="8.5" cy="7" r="4"></circle>
+                            <polyline points="17 11 19 13 23 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="notif-content">
+                        <div class="notif-text"><b>Sam Smith</b> started following you.</div>
+                        <div class="notif-time">1 hour ago</div>
+                    </div>
+                    <button
+                        style="background:var(--primary); color:white; border:none; padding:6px 14px; border-radius:20px; font-weight:600; cursor:pointer; font-size: 13px;">Follow
+                        Back</button>
+                </div>
+
+                <div class="notification-item">
+                    <div class="notif-icon comment">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="notif-content">
+                        <div class="notif-text"><b>Alex Chen</b> commented: "This design system is incredible! 🔥"</div>
+                        <div class="notif-time">3 hours ago</div>
+                    </div>
+                </div>
+
+                <div class="notification-item">
+                    <div class="notif-icon like">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="notif-content">
+                        <div class="notif-text"><b>Annie Hall</b> liked your reply.</div>
+                        <div class="notif-time">Yesterday</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Widgets -->
+        <aside class="widgets">
+            <div class="widget-card">
+                <h3 class="widget-title">Who to follow</h3>
+                <div style="display:flex; gap:10px; margin-bottom:12px; align-items:center;">
+                    <div class="avatar"
+                        style="width:36px; height:36px; background-image: url('https://api.dicebear.com/7.x/avataaars/svg?seed=John');">
+                    </div>
+                    <div>
+                        <div style="font-weight:600; font-size:14px;">John Doe</div>
+                        <div style="font-size:12px; color:var(--text-muted)">@johndoe</div>
+                    </div>
+                    <button
+                        style="margin-left:auto; background:white; color:black; border:none; padding:6px 14px; border-radius:20px; font-weight:600; cursor:pointer;">Follow</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- DISPLAY SETTINGS MODAL -->
+        <div id="display-modal" class="modal-overlay"
+            style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:1000; align-items:center; justify-content:center;">
+            <div class="modal-card"
+                style="background:var(--bg-card); padding:24px; border-radius:16px; width:90%; max-width:400px; border:1px solid var(--border-subtle); backdrop-filter:blur(10px);">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                    <h3 style="margin:0;">Display Settings</h3>
+                    <button id="close-display"
+                        style="background:none; border:none; color:var(--text-muted); font-size:24px; cursor:pointer;">&times;</button>
+                </div>
+
+                <!-- Color Palette -->
+                <div style="margin-bottom:24px;">
+                    <label style="display:block; margin-bottom:10px; font-weight:600; font-size:14px;">Accent
+                        Color</label>
+                    <div style="display:flex; gap:12px;">
+                        <div class="color-swatch" data-color="#6366f1"
+                            style="width:32px; height:32px; border-radius:50%; background:#6366f1; cursor:pointer; border:2px solid white;">
+                        </div>
+                        <div class="color-swatch" data-color="#ec4899"
+                            style="width:32px; height:32px; border-radius:50%; background:#ec4899; cursor:pointer; border:2px solid transparent;">
+                        </div>
+                        <div class="color-swatch" data-color="#10b981"
+                            style="width:32px; height:32px; border-radius:50%; background:#10b981; cursor:pointer; border:2px solid transparent;">
+                        </div>
+                        <div class="color-swatch" data-color="#f59e0b"
+                            style="width:32px; height:32px; border-radius:50%; background:#f59e0b; cursor:pointer; border:2px solid transparent;">
+                        </div>
+                        <div class="color-swatch" data-color="#3b82f6"
+                            style="width:32px; height:32px; border-radius:50%; background:#3b82f6; cursor:pointer; border:2px solid transparent;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Theme Toggle -->
+                <div style="margin-bottom:24px;">
+                    <label style="display:block; margin-bottom:10px; font-weight:600; font-size:14px;">Background
+                        Theme</label>
+                    <div
+                        style="display:flex; gap:10px; background:rgba(255,255,255,0.05); padding:4px; border-radius:12px;">
+                        <button class="theme-btn active" data-theme="dark"
+                            style="flex:1; padding:8px; border:none; border-radius:8px; background:var(--bg-card); color:white; cursor:pointer;">Dark</button>
+                        <button class="theme-btn" data-theme="light"
+                            style="flex:1; padding:8px; border:none; border-radius:8px; background:transparent; color:var(--text-muted); cursor:pointer;">Light</button>
+                        <button class="theme-btn" data-theme="dim"
+                            style="flex:1; padding:8px; border:none; border-radius:8px; background:transparent; color:var(--text-muted); cursor:pointer;">Dim</button>
+                    </div>
+                </div>
+
+                <!-- Font Size -->
+                <div style="margin-bottom:24px;">
+                    <label style="display:block; margin-bottom:10px; font-weight:600; font-size:14px;">Font Size</label>
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <span style="font-size:12px;">Aa</span>
+                        <input type="range" min="14" max="20" value="16" id="font-range"
+                            style="flex:1; cursor:pointer;">
+                        <span style="font-size:18px;">Aa</span>
+                    </div>
+                </div>
+
+                <button id="save-display"
+                    style="width:100%; padding:12px; background:var(--primary); color:white; border:none; border-radius:12px; font-weight:600; cursor:pointer;">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHARE MODAL -->
+    <div class="share-modal">
+        <div class="share-card">
+            <div class="share-header">
+                <div class="share-title">Share Post</div>
+                <div class="share-close">&times;</div>
+            </div>
+            <div class="share-grid">
+                <!-- Content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

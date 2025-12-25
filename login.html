@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Orbit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="js/backend.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <div class="login-page-bg">
+        <div class="orbit-glow"></div>
+        <div class="login-container">
+            <div class="login-card">
+                <div class="login-header">
+                    <div class="login-logo">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <path d="M12 2v20M2 12h20"></path>
+                            <circle cx="12" cy="12" r="3" fill="currentColor"></circle>
+                        </svg>
+                    </div>
+                    <h1 class="login-title">Orbit</h1>
+                    <div class="login-subtitle">Explore the digital universe.</div>
+                </div>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label class="form-label">Username</label>
+                        <input type="text" class="form-input login-input" placeholder="Enter your handle" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-input login-input" placeholder="••••••••" required>
+                    </div>
+
+                    <button type="submit" class="btn-login">
+                        <span>Enter Orbit</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="form-footer">
+                    <a href="#" class="forgot-link">Forgot Password?</a>
+                    <span class="divider">•</span>
+                    <a href="#" class="create-link">Create Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Inline script to prevent redirect loop since app.js might auto-redirect
+        // But app.js logic will handle the form specific logic if getting specific ID
+    </script>
+</body>
+
+</html>
